@@ -82,11 +82,11 @@ employed. In French, for example, these abbreviations are "Sa" and "Di", so you 
 write the following in your .bashrc or equivalent:
 
 ```
-    CALCOL\_SAT=Sa
-    export CALCOL\_SAT
+    CALCOL_SAT=Sa
+    export CALCOL_SAT
 
-    CALCOL\_SUN=Di
-    export CALCOL\_SUN
+    CALCOL_SUN=Di
+    export CALCOL_SUN
 ```
 
 Getting these values right is important, because calcol uses them to detect calendar
@@ -104,14 +104,14 @@ Foreground and background are optional color numbers from 0 to 255. The optional
 attribute is either "b" (for bold) or "u" (for underline). Trailing commas can be
 deleted (e.g., see the entry for CALCOL\_WEEKEND in the table above).
 
-For example, CALCOL_\MONTH equals "2,,b" by default, meaning that month names
+For example, CALCOL\_MONTH equals "2,,b" by default, meaning that month names
 are colored green (ANSI color 2) and in bold ("b") with no background color. To
 make month names appear in color 252, on background 140, and underlined, write
 the following in your .bashrc or equivalent:
 
 ```
-    CALCOL\_MONTH=252,140,u
-    export CALCOL\_MONTH
+    CALCOL_MONTH=252,140,u
+    export CALCOL_MONTH
 ```
 
 # License
