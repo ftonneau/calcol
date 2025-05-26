@@ -45,7 +45,7 @@ function define_styles() {
 }
 
 function ansi_codes(specs,
-    parts, foreground, background, effect) {
+        parts, foreground, background, effect) {
     split(specs, parts, ",")
     if (parts[1] ~ /^[[:digit:]]+$/) {
         num = parts[1] + 0
@@ -91,7 +91,7 @@ function starts_with_letter(row) {
 }
 
 function wordcount(row,
-cleanrow) {
+        cleanrow) {
     cleanrow = bleached(row)
     return gsub(/[[:alpha:]]+/, "&", cleanrow)
 }
@@ -148,7 +148,7 @@ function has_year(row) {
 }
 
 function remove(string, substring,
-    before, after, left, right) {
+        before, after, left, right) {
     before = index(string, substring) - 1
     if (before) left = substr(string, 1, before)
     after = index(string, substring) + length(substring)
@@ -157,7 +157,7 @@ function remove(string, substring,
 }
 
 function paint_date_columns(row,
-    nweeks, week, m) {
+        nweeks, week, m) {
     Timeframe = Column_model
 
     # Moving left to right along weeks, we mark the positions of week
@@ -185,7 +185,7 @@ function add_weeknum_mark() {
 }
 
 function find_next_match(pattern,
-    col, wipe) {
+        col, wipe) {
     match(Timeframe, pattern)
     for (col = 1; col <= RLENGTH; col++) wipe = wipe "-"
     sub(pattern, wipe, Timeframe)     # => prevent rematching
@@ -217,7 +217,7 @@ function add_weekend_mark() {
 }
 
 function paint(row, pos, style_on, width, style_off,
-    left, middle, right) {
+        left, middle, right) {
     if (pos > 1) left = substr(row, 1, pos - 1)
     middle = Plain style_on substr(row, pos, width) style_off
     right = substr(row, pos + width)
@@ -225,7 +225,7 @@ function paint(row, pos, style_on, width, style_off,
 }
 
 function paint_date_row(row,
-    style) {
+        style) {
     # Paint row from right to left, so that inserting color codes does
     # not disturb leftward char positions.
     if (row ~ "^" Sat_or_sun) {
