@@ -17,10 +17,15 @@ customized independently, and header backgrounds that do not straddle separate
 months. Calcol also allows you to customize year numbers, and accepts terminal
 colors in the 0-255 range instead of being limited to the 16 ANSI colors.
 
-The difference between cal and calcol can be seen in the following screenshot,
-in which cal comes first and calcol second:
+An example of color differences between cal and calcol can be seen in this
+screenshot:
 
 ![Comparison](comparison.png)
+
+Another example, this time with a vertical display (`-v` option) on a light
+background:
+
+![More](more.png)
 
 TLDR: Use calcol only if you prefer its looks. Cal and calcol are equally easy
 to configure.
