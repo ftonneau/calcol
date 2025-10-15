@@ -6,6 +6,21 @@
 # Author: Francois Tonneau
 # License: MIT
 
+# ------------------------------
+# Run cal --help, cal --version, etc., without coloring.
+# ------------------------------
+
+case "$*" in
+    *-h* | *--h* | *-V* | *--v*)
+        command cal "$@"
+        exit 0
+    ;;
+esac
+
+# ------------------------------
+# Otherwise, pipe cal ... into awk for coloring.
+# ------------------------------
+
 command cal "$@" --color=always | awk ' # => awk begin
 
 function import_vars() {
@@ -68,10 +83,6 @@ function define_constants() {
     Any_month = "[[:alpha:]]+( [[:digit:]]+)?"
     Any_year = "[[:digit:]][[:digit:]][[:digit:]][[:digit:]]"
     Gutter = "  +" # => at least two spaces
-}
-
-function has_punct(row) {
-    return bleached(row) ~ /[[:punct:]]/
 }
 
 function bleached(row) {
@@ -252,15 +263,6 @@ BEGIN {
 }
 
 {
-    if (has_punct($0)) {
-        Shows_help_or_version = 1
-    }
-
-    if (Shows_help_or_version) { # => avoid any coloring:
-        print
-        next
-    }
-
     if (has_head($0)) {
         if (!Global_settings) get_global_settings($0)
         if (Horizontal) get_column_model($0)
