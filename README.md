@@ -36,9 +36,11 @@ A POSIX system with **cal** and **awk**.
 
 # Installation
 
-1) Make calcol.sh executable (`chmod +x calcol.sh`) and copy it into your PATH.
+1) Download the provided [calcol.sh](./calcol.sh) file.
 
-2) Alias cal to calcol.sh in your .bashrc or equivalent:
+2) Make the file executable (`chmod +x calcol.sh`) and copy it into your PATH.
+
+3) Alias `cal` to `calcol.sh` in your .bashrc or equivalent:
 
 ```
 alias cal='calcol.sh'
