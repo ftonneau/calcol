@@ -31,10 +31,10 @@ function import_vars() {
     if (!Env_sun) Env_sun = "Sun"
 
     Env_head = ENVIRON["CALCOL_HEAD"]
-    if (!Env_head) Env_head = "0,2"
+    if (!Env_head) Env_head = ",15"
 
     Env_month = ENVIRON["CALCOL_MONTH"]
-    if (!Env_month) Env_month = "2,,b"
+    if (!Env_month) Env_month = ",,b"
 
     Env_weekend = ENVIRON["CALCOL_WEEKEND"]
     if (!Env_weekend) Env_weekend = "3"
@@ -43,10 +43,10 @@ function import_vars() {
     if (!Env_weeknum) Env_weeknum = "8"
 
     Env_year = ENVIRON["CALCOL_YEAR"]
-    if (!Env_year) Env_year = "2,,b"
+    if (!Env_year) Env_year = "6,,b"
 
     Env_focus = ENVIRON["CALCOL_FOCUS"]
-    if (!Env_focus) Env_focus = "0,1"
+    if (!Env_focus) Env_focus = "0,5"
 }
 
 function define_styles() {
