@@ -86,8 +86,8 @@ Calcol can be customized via environment variables:
 CALCOL\_SAT and CALCOL\_SUN should contain `cal`'s **abbreviations for Saturday and Sunday**,
 respectively. Their default values are "Sat" and "Sun," so leave them untouched if your
 version of `cal` uses English. If your version of `cal` uses another language, however, you
-should define CALCOL\_SAT and CALCOL\_SUN so that they equal the abbreviations actually
-employed. In French, for example, these abbreviations are "Sa" and "Di", so you should
+should define CALCOL\_SAT and CALCOL\_SUN so that they equal the **abbreviations actually
+employed**. In French, for example, these abbreviations are "Sa" and "Di," so you should
 write the following in your `.bashrc` or equivalent:
 
 ```
